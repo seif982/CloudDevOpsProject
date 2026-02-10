@@ -1,0 +1,8 @@
+terraform {
+  backend "s3" {
+    bucket         = "seif-cloud-project-v1" # حط اسم Bucket حقيقي عندك
+    key            = "ivolve/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
+}

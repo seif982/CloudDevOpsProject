@@ -1,0 +1,8 @@
+---
+- name: Configure Jenkins Server
+  hosts: aws_ec2  # ده الاسم اللي الـ dynamic inventory بيفهمه
+  become: yes     # عشان يشتغل بصلاحيات root (sudo)
+  
+  roles:
+    - docker
+    - jenkins
